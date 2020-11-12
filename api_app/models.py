@@ -25,7 +25,7 @@ class Author(models.Model):
 
     deptartment = models.ForeignKey(Department, on_delete=models.SET_NULL, null=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    # college = models.OneToOneField(College, on_delete=models.SET_NULL)
+    college = models.ForeignKey(College, on_delete=models.SET_NULL, null=True)
     name = models.CharField(max_length=100)
     ORCid = models.CharField(max_length=19,null=True,blank=True)
     scopusID= models.BigIntegerField(null=True, blank=True)
@@ -45,12 +45,12 @@ class Paper(models.Model):
     authorID = models.ForeignKey(Author, on_delete=models.SET_NULL, null=True)
     title = models.CharField(max_length=100)
     DOI = models.CharField(max_length=50, primary_key=True, unique=True)
-    pri_author = models.CharField(max_length=100)
+    co_author = models.CharField(max_length=500)
     citation = models.IntegerField()
     fields = models.CharField(max_length=100)
-    publication_date = models.TimeField(auto_now=False, auto_now_add=False)
-    publish_name = models.CharField(max_length=100)
-    abstract = models.CharField(max_length=1000)
+    publication_date = models.DateTimeField()
+    publisher_name = models.CharField(max_length=100)
+    abstract = models.CharField(max_length=2000)
     # tags =
     def __str__(self):
         return self.title
