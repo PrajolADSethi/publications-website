@@ -42,7 +42,7 @@ class Author(models.Model):
 
 
 class Paper(models.Model):
-    authorID = models.ForeignKey(Author, on_delete=models.SET_NULL, null=True)
+    # authorID = models.ForeignKey(Author, on_delete=models.SET_NULL, null=True)
     title = models.CharField(max_length=100)
     DOI = models.CharField(max_length=50, primary_key=True, unique=True)
     co_author = models.CharField(max_length=500)
@@ -51,6 +51,11 @@ class Paper(models.Model):
     publication_date = models.DateTimeField()
     publisher_name = models.CharField(max_length=100)
     abstract = models.CharField(max_length=2000)
-    # tags =
+
+
+    def update_citation(self):
+        pass
+        # TODO: add logig to update citation
     def __str__(self):
         return self.title
+        
