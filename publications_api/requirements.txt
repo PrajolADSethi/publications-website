@@ -1,0 +1,5 @@
+django
+scholarly
+pyscopus==1.0.3a2
+wos
+elsapy

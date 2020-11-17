@@ -1,0 +1,74 @@
+INFO:scholarly:Getting https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=Steven%20A%20Cholewiak
+INFO:scholarly:Session proxy config is {}
+INFO:scholarly:Found 1 authors
+INFO:scholarly:Getting https://scholar.google.com/citations?hl=en&user=4bahYMkAAAAJ&pagesize=100
+INFO:scholarly:Session proxy config is {}
+INFO:scholarly:Getting https://scholar.google.com/citations?hl=en&view_op=view_citation&citation_for_view=4bahYMkAAAAJ:u5HHmVD_uO8C
+INFO:scholarly:Session proxy config is {}
+INFO:scholarly:Getting https://scholar.google.com/scholar?cites=18104797610932568627
+INFO:scholarly:Session proxy config is {}
+INFO:scholarly:Getting https://scholar.google.com/scholar?start=10&hl=en&as_sdt=0,5&sciodt=0,5&cites=18104797610932568627&scipsc=
+INFO:scholarly:Session proxy config is {}
+INFO:scholarly:Getting https://scholar.google.com/scholar?start=20&hl=en&as_sdt=0,5&sciodt=0,5&cites=18104797610932568627&scipsc=
+INFO:scholarly:Session proxy config is {}
+INFO:scholarly:Getting https://scholar.google.com/scholar?start=30&hl=en&as_sdt=0,5&sciodt=0,5&cites=18104797610932568627&scipsc=
+INFO:scholarly:Session proxy config is {}
+INFO:scholarly:Getting https://scholar.google.com/scholar?start=40&hl=en&as_sdt=0,5&sciodt=0,5&cites=18104797610932568627&scipsc=
+INFO:scholarly:Session proxy config is {}
+INFO:scholarly:Getting https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=Pratvina%20Talele
+INFO:scholarly:Session proxy config is {}
+INFO:scholarly:Found 1 authors
+INFO:scholarly:Getting https://scholar.google.com/citations?hl=en&user=_sFHQ8UAAAAJ&pagesize=100
+INFO:scholarly:Session proxy config is {}
+INFO:scholarly:Getting https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=Pratvina%20Talele
+INFO:scholarly:Session proxy config is {}
+INFO:scholarly:Found 1 authors
+INFO:scholarly:Getting https://scholar.google.com/citations?hl=en&user=_sFHQ8UAAAAJ&pagesize=100
+INFO:scholarly:Session proxy config is {}
+INFO:scholarly:Getting https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=Pratvina%20Talele
+INFO:scholarly:Session proxy config is {}
+INFO:scholarly:Found 1 authors
+INFO:scholarly:Getting https://scholar.google.com/citations?hl=en&user=_sFHQ8UAAAAJ&pagesize=100
+INFO:scholarly:Session proxy config is {}
+INFO:scholarly:Getting https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=Pratvina%20Talele
+INFO:scholarly:Session proxy config is {}
+INFO:scholarly:Found 1 authors
+INFO:scholarly:Getting https://scholar.google.com/citations?hl=en&user=_sFHQ8UAAAAJ&pagesize=100
+INFO:scholarly:Session proxy config is {}
+INFO:scholarly:Getting https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=Pratvina%20Talele
+INFO:scholarly:Getting https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=Pratvina%20Talele
+INFO:scholarly:Session proxy config is {}
+INFO:scholarly:Found 1 authors
+INFO:scholarly:Getting https://scholar.google.com/scholar?hl=en&q=Secure%20fog%20computing%20system%20using%20emoticon%20technique&as_vis=0&as_sdt=0,33
+INFO:scholarly:Session proxy config is {}
+INFO:scholarly:Getting https://scholar.google.com/scholar?hl=en&q=Secure%20fog%20computing%20system%20using%20emoticon%20technique&as_vis=0&as_sdt=0,33
+INFO:scholarly:Session proxy config is {}
+INFO:scholarly:Getting https://scholar.google.com/scholar?hl=en&q=A%20token%20based%20distributed%20group%20mutual%20exclusion%20algorithm%20with%20quorums%20for%20manet&as_vis=0&as_sdt=0,33
+INFO:scholarly:Session proxy config is {}
+INFO:scholarly:Getting https://scholar.google.com/scholar?hl=en&q=A%20token%20based%20distributed%20group%20mutual%20exclusion%20algorithm%20with%20quorums%20for%20manet&as_vis=0&as_sdt=0,33
+INFO:scholarly:Session proxy config is {}
+INFO:scholarly:Getting https://scholar.google.com/scholar?hl=en&q=A%20token%20based%20distributed%20group%20mutual%20exclusion%20algorithm%20with%20quorums%20for%20manet&as_vis=0&as_sdt=0,33
+INFO:scholarly:Session proxy config is {}
+INFO:scholarly:Getting https://scholar.google.com/citations?hl=en&user=_sFHQ8UAAAAJ&pagesize=100
+INFO:scholarly:Session proxy config is {}
+INFO:scholarly:Getting https://scholar.google.com/citations?hl=en&user=_sFHQ8UAAAAJ&pagesize=100
+INFO:scholarly:Session proxy config is {}
+INFO:scholarly:Getting https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=Shilpa%20Sonawani
+INFO:scholarly:Session proxy config is {}
+INFO:scholarly:Found 1 authors
+INFO:scholarly:Getting https://scholar.google.com/scholar?hl=en&q=A%20token%20based%20distributed%20group%20mutual%20exclusion%20algorithm%20with%20quorums%20for%20manet&as_vis=0&as_sdt=0,33
+INFO:scholarly:Session proxy config is {}
+INFO:scholarly:Getting https://scholar.google.com/scholar?hl=en&q=Comparing%20openstack%20and%20vmware&as_vis=0&as_sdt=0,33
+INFO:scholarly:Session proxy config is {}
+INFO:scholarly:Getting https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=Shilpa%20Sonawani
+INFO:scholarly:Session proxy config is {}
+INFO:scholarly:Found 1 authors
+INFO:scholarly:Getting https://scholar.google.com/citations?hl=en&user=-q76uy8AAAAJ&pagesize=100
+INFO:scholarly:Session proxy config is {}
+INFO:scholarly:Getting https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=Shilpa%20Sonawani
+INFO:scholarly:Session proxy config is {}
+INFO:scholarly:Found 1 authors
+INFO:scholarly:Getting https://scholar.google.com/citations?hl=en&user=-q76uy8AAAAJ&pagesize=100
+INFO:scholarly:Session proxy config is {}
+INFO:scholarly:Getting https://scholar.google.com/scholar?hl=en&q=Comparing%20openstack%20and%20vmware&as_vis=0&as_sdt=0,33
+INFO:scholarly:Session proxy config is {}
