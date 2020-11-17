@@ -1,10 +1,13 @@
 from pyscopus import Scopus
 import requests
 import json
-
+import environ
+env = environ.Env()
+# reading .env file
+environ.Env.read_env()
 # API Docs - https://kitchingroup.cheme.cmu.edu/blog/2015/04/03/Getting-data-from-the-Scopus-API/
 
-API_KEY = '3dc0c975260b2677a8533adc3d4e43bf'
+API_KEY = env('SCOPUS_API_KEY')
 scopus = Scopus(API_KEY)
 
 # author = scopus.retrieve_author('36706629400')
