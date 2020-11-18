@@ -9,11 +9,11 @@
  * @author Bartosz Wojciechowski
  * @author David Deutsch
  * @license The MIT License (MIT)
- * @todo Lazy Load Icon
- * @todo prevent animationend bubling
- * @todo itemsScaleUp
- * @todo Test Zepto
- * @todo stagePadding calculate wrong active classes
+ * @  Lazy Load Icon
+ * @  prevent animationend bubling
+ * @  itemsScaleUp
+ * @  Test Zepto
+ * @  stagePadding calculate wrong active classes
  */
 ;(function($, window, document, undefined) {
 
@@ -76,14 +76,14 @@
 
 		/**
 		 * Coordinates of all items in pixel.
-		 * @todo The name of this member is missleading.
+		 * @  The name of this member is missleading.
 		 * @protected
 		 */
 		this._coordinates = [];
 
 		/**
 		 * Current breakpoint.
-		 * @todo Real media queries would be nice.
+		 * @  Real media queries would be nice.
 		 * @protected
 		 */
 		this._breakpoint = null;
@@ -107,7 +107,7 @@
 
 		/**
 		 * Merge values of all items.
-		 * @todo Maybe this could be part of a plugin.
+		 * @  Maybe this could be part of a plugin.
 		 * @protected
 		 */
 		this._mergers = [];
@@ -131,7 +131,7 @@
 
 		/**
 		 * Current state information for the drag operation.
-		 * @todo #261
+		 * @  #261
 		 * @protected
 		 */
 		this._drag = {
@@ -328,7 +328,7 @@
 			var clones = [],
 				items = this._items,
 				settings = this.settings,
-				// TODO: Should be computed from number of min width items in stage
+				//  : Should be computed from number of min width items in stage
 				view = Math.max(settings.items * 2, 4),
 				size = Math.ceil(items.length / 2) * 2,
 				repeat = settings.loop && items.length ? settings.rewind ? view : Math.max(view, size) : 0,
@@ -551,8 +551,8 @@
 
 	/**
 	 * Setups the current settings.
-	 * @todo Remove responsive classes. Why should adaptive designs be brought into IE8?
-	 * @todo Support for media queries by using `matchMedia` would be nice.
+	 * @  Remove responsive classes. Why should adaptive designs be brought into IE8?
+	 * @  Support for media queries by using `matchMedia` would be nice.
 	 * @public
 	 */
 	Owl.prototype.setup = function() {
@@ -604,7 +604,7 @@
 
 	/**
 	 * Prepares an item before add.
-	 * @todo Rename event parameter `content` to `item`.
+	 * @  Rename event parameter `content` to `item`.
 	 * @protected
 	 * @returns {jQuery|HTMLElement} - The item container.
 	 */
@@ -725,8 +725,8 @@
 
 	/**
 	 * Registers event handlers.
-	 * @todo Check `msPointerEnabled`
-	 * @todo #261
+	 * @  Check `msPointerEnabled`
+	 * @  #261
 	 * @protected
 	 */
 	Owl.prototype.registerEventHandlers = function() {
@@ -752,8 +752,8 @@
 
 	/**
 	 * Handles `touchstart` and `mousedown` events.
-	 * @todo Horizontal swipe threshold as option
-	 * @todo #261
+	 * @  Horizontal swipe threshold as option
+	 * @  #261
 	 * @protected
 	 * @param {Event} event - The event arguments.
 	 */
@@ -815,7 +815,7 @@
 
 	/**
 	 * Handles the `touchmove` and `mousemove` events.
-	 * @todo #261
+	 * @  #261
 	 * @protected
 	 * @param {Event} event - The event arguments.
 	 */
@@ -850,8 +850,8 @@
 
 	/**
 	 * Handles the `touchend` and `mouseup` events.
-	 * @todo #261
-	 * @todo Threshold for click event
+	 * @  #261
+	 * @  Threshold for click event
 	 * @protected
 	 * @param {Event} event - The event arguments.
 	 */
@@ -887,7 +887,7 @@
 
 	/**
 	 * Gets absolute position of the closest item for a coordinate.
-	 * @todo Setting `freeDrag` makes `closest` not reusable. See #165.
+	 * @  Setting `freeDrag` makes `closest` not reusable. See #165.
 	 * @protected
 	 * @param {Number} coordinate - The coordinate in pixel.
 	 * @param {String} direction - The direction to check for the closest item. Ether `left` or `right`.
@@ -931,7 +931,7 @@
 
 	/**
 	 * Animates the stage.
-	 * @todo #270
+	 * @  #270
 	 * @public
 	 * @param {Number} coordinate - The coordinate in pixels.
 	 */
@@ -1187,7 +1187,7 @@
 
 	/**
 	 * Gets the coordinate of an item.
-	 * @todo The name of this method is missleanding.
+	 * @  The name of this method is missleanding.
 	 * @public
 	 * @param {Number} position - The absolute position of the item within `minimum()` and `maximum()`.
 	 * @returns {Number|Array.<Number>} - The coordinate of the item in pixel or all coordinates.
@@ -1372,7 +1372,7 @@
 
 	/**
 	 * Adds an item.
-	 * @todo Use `item` instead of `content` for the event arguments.
+	 * @  Use `item` instead of `content` for the event arguments.
 	 * @public
 	 * @param {HTMLElement|jQuery|String} content - The item content to add.
 	 * @param {Number} [position] - The relative position at which to insert the item otherwise the item will be added to the end.
@@ -1407,7 +1407,7 @@
 
 	/**
 	 * Removes an item by its position.
-	 * @todo Use `item` instead of `content` for the event arguments.
+	 * @  Use `item` instead of `content` for the event arguments.
 	 * @public
 	 * @param {Number} position - The relative position of the item to remove.
 	 */
@@ -1431,7 +1431,7 @@
 
 	/**
 	 * Preloads images with auto width.
-	 * @todo Replace by a more generic approach
+	 * @  Replace by a more generic approach
 	 * @protected
 	 */
 	Owl.prototype.preloadAutoWidthImages = function(images) {
@@ -1540,7 +1540,7 @@
 
 	/**
 	 * Triggers a public event.
-	 * @todo Remove `status`, `relatedTarget` should be used instead.
+	 * @  Remove `status`, `relatedTarget` should be used instead.
 	 * @protected
 	 * @param {String} name - The event name.
 	 * @param {*} [data=null] - The event data.
@@ -1660,7 +1660,7 @@
 
 	/**
 	 * Gets unified pointer coordinates from event.
-	 * @todo #261
+	 * @  #261
 	 * @protected
 	 * @param {Event} - The `mousedown` or `touchstart` event.
 	 * @returns {Object} - Contains `x` and `y` coordinates of current pointer position.
@@ -1697,7 +1697,7 @@
 
 	/**
 	 * Gets the difference of two vectors.
-	 * @todo #261
+	 * @  #261
 	 * @protected
 	 * @param {Object} - The first vector.
 	 * @param {Object} - The second vector.
@@ -1712,7 +1712,7 @@
 
 	/**
 	 * The jQuery Plugin for the Owl Carousel
-	 * @todo Navigation plugin `next` and `prev`
+	 * @  Navigation plugin `next` and `prev`
 	 * @public
 	 */
 	$.fn.owlCarousel = function(option) {
@@ -1918,7 +1918,7 @@
 						position = (e.property && e.property.value !== undefined ? e.property.value : this._core.current()) + i,
 						clones = this._core.clones().length,
 						load = $.proxy(function(i, v) { this.load(v) }, this);
-					//TODO: Need documentation for this new option
+					// : Need documentation for this new option
 					if (settings.lazyLoadEager > 0) {
 						n += settings.lazyLoadEager;
 						// If the carousel is looping also preload images that are to the "left"
@@ -2187,7 +2187,7 @@
 
 		/**
 		 * All event handlers.
-		 * @todo The cloned content removale is too late
+		 * @  The cloned content removale is too late
 		 * @protected
 		 * @type {Object}
 		 */
@@ -2446,7 +2446,7 @@
 
 	/**
 	 * Checks whether an video is currently in full screen mode or not.
-	 * @todo Bad style because looks like a readonly method but changes members.
+	 * @  Bad style because looks like a readonly method but changes members.
 	 * @protected
 	 * @returns {Boolean}
 	 */
@@ -2958,7 +2958,7 @@
 	/**
 	 * Default options.
 	 * @public
-	 * @todo Rename `slideBy` to `navBy`
+	 * @  Rename `slideBy` to `navBy`
 	 */
 	Navigation.Defaults = {
 		nav: false,
@@ -3114,7 +3114,7 @@
 
 	/**
 	 * Draws the user interface.
-	 * @todo The option `dotsData` wont work.
+	 * @  The option `dotsData` wont work.
 	 * @protected
 	 */
 	Navigation.prototype.draw = function() {

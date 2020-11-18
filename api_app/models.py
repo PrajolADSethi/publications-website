@@ -35,8 +35,10 @@ class Author(models.Model):
     phoneno = models.BigIntegerField(blank=True,null=True)
     weblinks = models.CharField(max_length=200 ,null=True,blank=True)
     designation = models.CharField(max_length=100)
-    # username = models.CharField(max_length=100)
-    # password =
+
+    def get_all_articles(self):
+        pass
+
     def __str__(self):
         return self.name
 
@@ -46,7 +48,11 @@ class Paper(models.Model):
     title = models.CharField(max_length=100)
     DOI = models.CharField(max_length=50, primary_key=True, unique=True)
     co_author = models.CharField(max_length=500)
-    citation = models.IntegerField()
+    citations_google_scholar = models.IntegerField(default=0)
+    citations_ieee = models.IntegerField(default=0)
+    citations_scopus = models.IntegerField(default=0)
+    citations_researchgate = models.IntegerField(default=0)
+    citations_webofscience = models.IntegerField(default=0)
     fields = models.CharField(max_length=100)
     publication_date = models.DateTimeField()
     publisher_name = models.CharField(max_length=100)
@@ -55,7 +61,10 @@ class Paper(models.Model):
 
     def update_citation(self):
         pass
-        # TODO: add logig to update citation
+        # TODO: add logic to update citation
+
+    def get_authors(self):
+        return str(self.co_author).split(', ')
+
     def __str__(self):
         return self.title
-        

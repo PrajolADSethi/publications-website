@@ -2525,7 +2525,7 @@ readers do not read off random characters that represent icons */
 .la-mask:before {
   content: "\f6fa"; }
 
-.la-mastodon:before {
+.la-mas n:before {
   content: "\f4f6"; }
 
 .la-maxcdn:before {
