@@ -36,8 +36,10 @@ class Author(models.Model):
     weblinks = models.CharField(max_length=200 ,null=True,blank=True)
     designation = models.CharField(max_length=100)
 
-    def get_all_articles(self):
-        pass
+    def save(self, *args, **kwargs):
+
+        
+        super().save(*args, **kwargs)  # Call the "real" save() method.
 
     def __str__(self):
         return self.name

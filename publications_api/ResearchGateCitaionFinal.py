@@ -7,8 +7,8 @@ import pprint
 faculty = ["Shilpa_Sonawani", "Mangesh_Bedekar", "Pradnya_Kulkarni5"]
 
 
-def find_articles(i):
-    url = "https://www.researchgate.net/profile/" + i
+def find_articles(author):
+    url = "https://www.researchgate.net/profile/" + author
     html = urllib.request.urlopen(url).read()
     soup = BeautifulSoup(html, 'html.parser')
 
@@ -57,8 +57,7 @@ def find_citation(i):
     return citation_count[2]
 
 
-def individual_citation(i):
-    url = i
+def individual_citation(url):
     html = urllib.request.urlopen(url).read()
     soup = BeautifulSoup(html, "html.parser")
 
@@ -73,26 +72,15 @@ def individual_citation(i):
         ((((temp.split()[1]).split("("))[1]).split(")")[0]).split("'")[0])
 
 
-art_links = []
 
+def get_researchgate_data(author):
+    pubs = find_articles(author)
+    art_links = find_article_links(author)
 
-for each in faculty:
-    # pprint.pprint(find_citation(each))
-    #   print("------------------------------------------------------------------")
-    # pprint.pprint(find_articles(each))
-    #  print("------------------------------------------------------------------")
-    temp_links = find_article_links(each)
-    for k in temp_links:
-        art_links.append(k)
-    # pprint.pprint(find_article_links(each))
-    # print("==================================================================="
-    #       "==================================================================="
-    #       "==================================================================")
+    current_pub = 0
+    for i in art_links:
 
-# temp_links = ["https://www.researchgate.net/publication"
-#               "/332381355_Improved_Logistic_Regression_Approach_in_Feature_Selection_for_EHR",
-#               "https://www.researchgate.net/publication/311250199_Classification_problem_solving_using_multi"
-#               "-objective_optimization_approach_and_local_search"]
+        # ------------ ADD ALL INFO TO DB using pubs[current_pub] to get the specific title from db ------------
 
-for i in art_links:
-    print(individual_citation(i))
+        print(individual_citation(i))
+        current_pub+=1

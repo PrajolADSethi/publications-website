@@ -3,3 +3,4 @@ api_app/__pycache__
 api_app/migrations/__pycache__
 publications_api/config.json
 publications_api/.env
+publications_api/__pycache__
