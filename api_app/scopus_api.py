@@ -2,7 +2,7 @@ from pyscopus import Scopus
 import requests
 import json
 import environ
-import pprint
+from . import models
 
 env = environ.Env()
 # reading .env file
@@ -21,18 +21,19 @@ def get_scopus_data(titles):
         resp = requests.get(f"http://api.elsevier.com/content/search/scopus?query=TITLE({title})&field=citedby-count",
                             headers={'Accept':'application/json',
                                      'X-ELS-APIKey': API_KEY})
+
+        print(resp.headers)
         data = json.dumps(resp.json(),
                          sort_keys=True,
                          indent=4, separators=(',', ': '))
 
         data_dict = json.loads(data)
-        # print(data_dict)
-        if 'service-error' not in data_dict:
+        if 'service-error' not in data_dict:    
             if (int(data_dict['search-results']['opensearch:totalResults']) == 1):
                 # ------------ ADD ALL INFO TO DB ------------
                 cites = data_dict["search-results"]["entry"][0]['citedby-count']
 
                 paper = models.Paper.objects.get(title=title)
-                paper.citations_scopus = cites
+
+                paper.citations_scopus = int(cites)
                 paper.save()
-get_scopus_data(['Hybrid NSGA II Approach for Neural Network Classification'])

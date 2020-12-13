@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+from . import scholarly_api, scopus_api, ieee_api
+
 
 
 # Create your models here.
@@ -38,7 +40,15 @@ class Author(models.Model):
 
     def save(self, *args, **kwargs):
 
-        
+        titles = scholarly_api.get_pubs_titles(self.name)
+        print(titles)
+
+        scholarly_api.get_gs_data(self.name, titles)
+        #
+        scopus_api.get_scopus_data(titles)
+        #
+        ieee_api.get_ieee_data(titles)
+
         super().save(*args, **kwargs)  # Call the "real" save() method.
 
     def __str__(self):
@@ -48,17 +58,18 @@ class Author(models.Model):
 class Paper(models.Model):
     # authorID = models.ForeignKey(Author, on_delete=models.SET_NULL, null=True)
     title = models.CharField(max_length=100)
-    DOI = models.CharField(max_length=50, primary_key=True, unique=True)
+    # DOI = models.CharField(max_length=50, unique=True, null=True, blank=True)
     co_author = models.CharField(max_length=500)
     citations_google_scholar = models.IntegerField(default=0)
     citations_ieee = models.IntegerField(default=0)
     citations_scopus = models.IntegerField(default=0)
     citations_researchgate = models.IntegerField(default=0)
     citations_webofscience = models.IntegerField(default=0)
-    fields = models.CharField(max_length=100)
-    publication_date = models.DateTimeField()
-    publisher_name = models.CharField(max_length=100)
-    abstract = models.CharField(max_length=2000)
+    fields = models.CharField(max_length=100, null=True, blank=True)
+    publication_year = models.IntegerField()
+    publisher_name = models.CharField(max_length=100, null=True, blank=True)
+    abstract = models.CharField(max_length=2000, null=True, blank=True)
+    url = models.URLField(max_length=200, null=True, blank=True)
 
 
     def update_citation(self):

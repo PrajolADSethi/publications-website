@@ -5,3 +5,4 @@ wos
 elsapy
 python-dotenv
 beautifulsoup4
+free-proxy
